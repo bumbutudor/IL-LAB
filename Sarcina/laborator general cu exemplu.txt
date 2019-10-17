@@ -1,0 +1,61 @@
+﻿
+Ingineria Limbajului
+
+Lucrarea de laborator generală pe tot semestrul.
+
+Tema:  Crearea sistemului automat de Întrebare-Răspuns.
+
+Sarcina: De creat un soft care răspunde la întrebările utilizatorului găsind răspunsurile în text.
+
+
+Etapele de lucru:
+
+1. De ales un text (poveste, povestire, roman, etc.) cu condiția că este mai lung de 3000 cuvinte și de formulat 15 întrebări în baza textului ales.
+2. De analizat întrebările cu scopul automatizării procesării lor (ideea este să puneți întrebările în așa mod încât să primiți ușor răspuns la ele, exemplu: Ionel citește un roman -> Ce citește Ionel?).
+3. De creat partea aplicației care efectuează analiza întrebărilor și formarea listei cuvintelor cheie.
+4. De creat partea aplicației care extrage din text lista fragmentelor care pot să conțină răspunsul și le sortează după relevanță utilizând lista cuvintelor cheie.
+5. De creat partea aplicației care extrage răspunsul la întrebarea pusă de utilizator.
+
+
+
+Exemplu de soluție.
+
+Punctul 1.
+
+Povestea:  Punguța cu doi bani.
+
+Intrebările:
+1. Ce avea baba și ce avea moșneagul?
+2. Ce a găsit cucoșul?
+3. Cu cine se intîlnește cucoșul?
+4. Ce înghite cucoșul?
+5. Etc.
+Întrebările se scriu corect în limba română cu semnele diacritice!
+
+Punctul 2. De analizat întrebările cu scopul automatizării procesării lor.
+
+2.a. Întrebările se analizează morfologic utilizînd part of speech tagger (POS) creat de grupul de cercetare la universitatea Alecsandru Ioan Cuză din Iași. 
+1. Taggerul se află în folderul bin_PosRo. 
+2. Întrebările se salvează într-un fișier text și se plasează în folderul bin_PosRo\inputuri. 
+3. VERIFICAȚI FIȘIERUL DACĂ ESTE CODIFICAT UTF-8. 
+4. Se rulează start_tagging_inputs.bat. 
+5. Rezultatul va fi creat în folderul  bin_PosRo\outputuri cu același nume ca și fișierul de întrare, dar cu extensia .xml, iar pe lângă acest fișier va mai apărea un fișier .conllu, care va fi folosit în următoarele procesări.
+
+Informația suplimentară. Taggerul este scris ăn limbajul Java și, respectiv poate fi rulat doar la calculator dacă Java este instalată. Folderul data conține dicționarele posDictRoDiacr.txt și posDictRoMixedDiacr.txt utilizate în procesul de tagging. Dicționarele sunt voluminoase și posibil, va fi nevoie de mărit memoria pentru Java (heap size).
+
+Rezultatul taggerului arată în așa mod :
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<POS_Output>
+. . . . . . . . . . . . . .
+  <S id="2" offset="35">
+    <W Case="direct" LEMMA="ce" MSD="Pw3--r" POS="PRONOUN" Person="third" Type="relative" id="2.1" offset="0">Ce</W>
+    <W LEMMA="avea" MSD="Vaip3s" Mood="indicative" Number="singular" POS="VERB" Person="third" Tense="present" Type="auxiliary" id="2.2" offset="3">a</W>
+    <W EXTRA="tranzitiv" LEMMA="găsi" MSD="Vmp" Mood="participle" POS="VERB" Type="predicative" id="2.3" offset="5">găsit</W>
+    <W Case="direct" Definiteness="yes" Gender="masculine" LEMMA="cucoș" MSD="Ncmsry" Number="singular" POS="NOUN" Type="common" id="2.4" offset="11">cucoșul</W>
+    <W LEMMA="?" MSD="QUEST" id="2.5" offset="18">?</W>
+  </S>
+ . . . . . . . . . . . . . . . . . . . 
+</POS_Output>
+
+Rezultatul acesta trebuie de recodificat in format CONLLU pentru MaltParser cu care se va face analiza sintactică.
+  

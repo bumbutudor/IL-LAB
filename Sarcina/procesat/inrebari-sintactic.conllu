@@ -1,0 +1,34 @@
+# sent_id = 1
+1	Cine	cine	PRON	Pw3--r	Case=Dir|Person=3	2	nsubj	_	_
+2	este	fi	VERB	Vmip3s	VerbForm=Ind|Number=Sing|Person=3|Tense=Pres	0	root	_	_
+3	Mickey	Mickey	NOUN	Npmsry	Case=Dir|Definite=Def|Gender=Masc|Number=Sing	2	obj	_	_
+4	Mouse	Mouse	NOUN	Npfprn	Case=Dir|Definite=Ind|Gender=Fem|Number=Plur	3	nmod	_	_
+5	?	?	PUNCT	QUEST	_	2	punct	_	_
+
+# sent_id = 2
+1	De către	de~către	ADP	Sp	_	2	case	_	_
+2	cine	cine	PRON	Pw3--r	Case=Dir|Person=3	4	obl	_	_
+3	a	avea	AUX	Vaip3s	Mood=Ind|Number=Sing|Person=3|Tense=Pres	4	aux	_	_
+4	fost	fi	VERB	Vmp	VerbForm=Par|Number=|Person=1|Tense=	0	root	_	_
+5	creat	creat	ADJ	Afpmsrn	Case=Dir|Definite=Ind|Gender=Masc|Number=Sing	4	xcomp	_	_
+6	?	?	PUNCT	QUEST	_	4	punct	_	_
+
+# sent_id = 3
+1	Cum	cum	ADV	Rg	_	2	advmod	_	_
+2	este	fi	VERB	Vmip3s	VerbForm=Ind|Number=Sing|Person=3|Tense=Pres	0	root	_	_
+3	îmbracat	îmbracat	ADV	Rg	_	4	advmod	_	_
+4	el	el	PRON	Pp3msr	Case=Dir|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
+5	,	,	PUNCT	COMMA	_	6	punct	_	_
+6	de obicei	de~obicei	ADV	Rg	_	2	advmod:tmod	_	_
+7	?	?	PUNCT	QUEST	_	2	punct	_	_
+
+# sent_id = 4
+1	Unde	unde	ADV	Rg	_	4	advmod	_	_
+2	și-	sine	PRON	Px3--o	Case=Obl|Person=3	4	expl:poss	_	_
+3	a	avea	AUX	Vaip3s	Mood=Ind|Number=Sing|Person=3|Tense=Pres	4	aux	_	_
+4	făcut	face	VERB	Vmp	VerbForm=Par|Number=|Person=1|Tense=	0	root	_	_
+5	debutul	debut	NOUN	Ncmsry	Case=Dir|Definite=Def|Gender=Masc|Number=Sing	4	obj	_	_
+6	Mickey	Mickey	NOUN	Npfsry	Case=Dir|Definite=Def|Gender=Fem|Number=Sing	5	nmod	_	_
+7	Mouse	Mouse	NOUN	Npfprn	Case=Dir|Definite=Ind|Gender=Fem|Number=Plur	6	nmod	_	_
+8	?	?	PUNCT	QUEST	_	4	punct	_	_
+
