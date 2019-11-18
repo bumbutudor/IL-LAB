@@ -1,1 +1,20 @@
+﻿Lab 3-4
+
+De creat partea aplicației care efectuează analiza întrebărilor. Crearea listei cuvintelor cheie.
+De creat partea aplicației care extrage din text lista fragmentelor care pot să conțină răspunsul și le sortează după relevanță utilizând lista cuvintelor cheie.
+
+Instrumente
+
+Verificati python instalat la nivel global, utilizand 'python'.
+Verificati pip utilizand comanda 'pip' in cmd. Daca nu este pip, descarcati fisierul https://bootstrap.pypa.io/get-pip.py .
+Prin cmd instalati pip. Mergeti in locul unde este fisierul get-pip.py si scrieti comanda 'python get-pip.py' + Enter.
+Update la pip 'pip install --upgrade pip'.
+Utilizand pip, instalati toate bibliotecile necesare:
+a. nltk -> pip install nltk;
+b. conll_df -> pip install conll_df;
+c. jupyter notebook -> pip instal jupyter notebook
+
+
 Deschideti fisierul intrebare-raspuns_lab3.ipynb si urmati urmatoarele instructiuni...
+
+
